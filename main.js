@@ -2,10 +2,14 @@ let random;
 
 function randomEvent(){
     random = Math.random() * 100;
-    console.log(Math.round(random))
     findEvent()
 }
+function dice(){
+    document.getElementById("number").innerHTML = `${Math.round(Math.random() * 6)}`;
+}
 function findEvent(){
+    document.getElementById("number").style.display = 'none';
+    document.getElementById("dice").style.display = 'none';
     switch (Math.round(random))
     {
         case 1:
@@ -426,11 +430,15 @@ function findEvent(){
         case 84:
             document.getElementById("text").innerHTML = "Dice";
             document.getElementById("explain").innerHTML = "Jeder würfelt, die Augenzahl wird getrunken";
+            document.getElementById("number").style.display = "block";
+            document.getElementById("dice").style.display = "block";
             break;
 
         case 85:
             document.getElementById("text").innerHTML = "Dice";
             document.getElementById("explain").innerHTML = "Jeder würfelt, die Augenzahl wird getrunken";
+            document.getElementById("number").style.display = "block";
+            document.getElementById("dice").style.display = "block";
             break;
 
         case 86:
